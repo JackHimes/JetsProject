@@ -1,5 +1,5 @@
-FighterJet, model, speed, range, price
-CargoJet, model, speed, range, price
-3 Default Jet
-4
-5
+FighterJet,Interceptor,1500,500,83000000
+CargoJet,AirBus,1000,9000,53000000
+PassengerJet,Boeing,1100,5000,68000000
+FighterJet,F16,1600,750,90000000
+CargoJet,CargoMaster,900,10000,75000000
