@@ -18,12 +18,17 @@ public class AirField {
 	}
 
 
-	public List<Jet> getAirField1() {
+	
+	
+
+
+	public List<Jet> getAirField() {
 		return airField;
 	}
 
-	public void setAirField1(List<Jet> airField1) {
-		this.airField = airField1;
+
+	public void setAirField(List<Jet> airField) {
+		this.airField = airField;
 	}
 
 }

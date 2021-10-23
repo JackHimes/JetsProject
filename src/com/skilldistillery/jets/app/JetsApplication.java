@@ -14,7 +14,7 @@ import com.skilldistillery.jets.entities.Jet;
 import com.skilldistillery.jets.entities.PassengerJet;
 
 public class JetsApplication {
-	private AirField airField = new AirField();
+	static AirField airField = new AirField();
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -23,34 +23,35 @@ public class JetsApplication {
 		boolean keepGoing = true;
 
 		ja.jetListCreation(listOfJets);
+		airField.setAirField(listOfJets);
 
 		while (keepGoing) {
 			ja.displayMenu();
 			int userInput = scanner.nextInt();
 			switch (userInput) {
 			case 1:
-				ja.displayFleet(listOfJets);
+				ja.displayFleet(airField.getAirField());
 				break;
 			case 2:
-				ja.flyTheFleet(listOfJets);
+				ja.flyTheFleet(airField.getAirField());
 				break;
 			case 3:
-				ja.findFastestJet(listOfJets);
+				ja.findFastestJet(airField.getAirField());
 				break;
 			case 4:
-				ja.findLongestRangeJet(listOfJets);
+				ja.findLongestRangeJet(airField.getAirField());
 				break;
 			case 5:
-				ja.loadFleetsCargo(listOfJets);
+				ja.loadFleetsCargo(airField.getAirField());
 				break;
 			case 6:
-				ja.combatReadyFleets(listOfJets);
+				ja.combatReadyFleets(airField.getAirField());
 				break;
 			case 7:
-				ja.addJetToFleet(listOfJets, scanner);
+				ja.addJetToFleet(airField.getAirField(), scanner);
 				break;
 			case 8:
-				ja.removeJetFromFleet(listOfJets, scanner);
+				ja.removeJetFromFleet(airField.getAirField(), scanner);
 				break;
 			case 9:
 				keepGoing = false;
